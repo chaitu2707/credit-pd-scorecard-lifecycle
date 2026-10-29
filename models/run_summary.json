@@ -1,0 +1,11 @@
+{
+ "trials": 5,
+ "scorecard_C": 0.01,
+ "recalibration_shift": 0.3114970466816167,
+ "champion_gini_oot": 0.3838778171836339,
+ "champion_gini_validation": 0.431734942787922,
+ "challenger_replace": false,
+ "retrain_review_batches": 17,
+ "red_batches": 18,
+ "batches_total": 21
+}

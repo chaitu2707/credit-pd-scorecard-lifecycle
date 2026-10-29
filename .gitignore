@@ -1,0 +1,34 @@
+# Raw and processed data: too large, downloaded or generated locally
+data/raw/*
+data/processed/*
+!data/raw/README.md
+!data/processed/.gitkeep
+
+# Generated models: tree model files are large and not needed by the dashboard
+models/*.pkl
+models/*.joblib
+models/*.txt
+models/*.cbm
+models/*.json
+reports/figures/*
+!reports/figures/.gitkeep
+
+# Dashboard results: small files, kept so the dashboard runs without retraining
+!models/scorecard.json
+!models/scorecard_no_grade.json
+!models/run_summary.json
+!models/champion_challenger.json
+!models/tuning.json
+!models/calibration.json
+reports/tables/*
+!reports/tables/*.csv
+!reports/tables/oot_predictions.parquet
+!reports/tables/.gitkeep
+
+# Python, notebook and tool caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.pytest_cache/
+catboost_info/

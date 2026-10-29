@@ -1,0 +1,36 @@
+{
+ "xgboost": {
+  "best_params": {
+   "learning_rate": 0.013787764619353767,
+   "max_depth": 3,
+   "min_child_weight": 4,
+   "subsample": 0.7824279936868144,
+   "colsample_bytree": 0.8925879806965068,
+   "reg_lambda": 0.05477562363971305,
+   "gamma": 0.07982478599323917
+  },
+  "best_iteration": 815,
+  "best_validation_logloss": 0.14522041380405426
+ },
+ "lightgbm": {
+  "best_params": {
+   "learning_rate": 0.06798962421591129,
+   "num_leaves": 20,
+   "min_data_in_leaf": 75,
+   "feature_fraction": 0.6733618039413735,
+   "bagging_fraction": 0.7216968971838151,
+   "lambda_l2": 0.8730885649333644
+  },
+  "best_iteration": 125,
+  "best_validation_logloss": 0.14536989547190957
+ },
+ "catboost": {
+  "best_params": {
+   "learning_rate": 0.10702082748695269,
+   "depth": 4,
+   "l2_leaf_reg": 1.7240892195821529
+  },
+  "best_iteration": 177,
+  "best_validation_logloss": 0.14558543902428486
+ }
+}

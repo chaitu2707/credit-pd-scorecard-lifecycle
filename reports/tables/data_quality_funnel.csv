@@ -1,0 +1,5 @@
+step,rows_remaining,rows_removed
+raw file rows,2260701,0
+"final outcome only (drop Current, grace, late)",1348099,912602
+issued on or before 2017-09-30,1257680,90419
+charged-off loans with no last payment date,1256067,1613

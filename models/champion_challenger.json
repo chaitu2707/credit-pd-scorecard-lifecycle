@@ -1,0 +1,15 @@
+{
+ "champion": "scorecard_with_grade_recalibrated",
+ "best_challenger_by_validation_gini": "xgboost",
+ "validation_gini": {
+  "xgboost": 0.43492216100546566,
+  "lightgbm": 0.4313627360576373,
+  "catboost": 0.40269464437793134,
+  "ensemble": 0.4316172820228372
+ },
+ "oot_gini_gain_over_champion": 0.0009936996122916764,
+ "oot_calibration_gap_champion": -0.03175974737986951,
+ "oot_calibration_gap_challenger": -0.031451681063063334,
+ "replace_champion": false,
+ "rule": "replace only if out-of-time Gini gain >= 0.02 and calibration gap is no larger"
+}
