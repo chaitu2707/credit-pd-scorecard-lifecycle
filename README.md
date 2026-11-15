@@ -1,5 +1,7 @@
 # Credit Default PD Model: Scorecard Development, Validation and Monitoring
 
+This project aims to understand the key components of the credit Probability of Default (PD) model lifecycle, from scorecard development and validation to ongoing monitoring.
+
 A 12-month probability-of-default (PD) model for unsecured consumer instalment loans, built on the Lending Club accepted loans file (2007 to 2018 Q4, 2.26 million loans). The champion model is a weight-of-evidence (WoE) logistic scorecard. The model is developed on vintage-based samples, validated out of time, and documented to model risk governance expectations.
 
 ## Headline results
@@ -9,10 +11,9 @@ A 12-month probability-of-default (PD) model for unsecured consumer instalment l
 | Validation | Jul 2014 to Dec 2015 | 498,802 | 3.58% | 0.432 | 0.321 | 0.0337 |
 | Out-of-time | Jan 2016 to Sep 2017 | 427,382 | 6.71% | 0.384 | 0.279 | 0.0621 |
 
-
 Tree challenger (XGBoost) reach Gini 0.381 to 0.386 out of time. None beats the scorecard by the 0.02 margin required for replacement.
 
-**Calibration and drift are the main limitations.** Predicted PD is about half the observed default rate out of time, and monitoring shows the gap widening through 2016 and 2017. The retraining review trigger has fired. See the validation report, sections 8 and 11.
+**Calibration and drift are the main limitations.** Predicted PD is about half the observed default rate out of time, and monitoring shows the gap widening through 2016 and 2017. The retraining review is required. See the validation report, sections 8 and 11.
 
 _The challenger figures come from a 5-trial tuning run. A 50-trial refresh is scheduled._
 
@@ -20,7 +21,7 @@ _The challenger figures come from a 5-trial tuning run. A 50-trial refresh is sc
 
 - Unsecured consumer instalment loans from a US peer-to-peer platform.
 - 12-month PD on final-outcome loans only, with a maturity rule so that every loan has a full outcome window.
-- Logistic regression scorecard (WoE bins, points scaling, reason codes) as champion. Tree challengers (XGBoost, LightGBM, CatBoost) and their calibrated ensemble, with the champion-challenger rule applied.
+- Logistic regression scorecard (WoE bins, points scaling, reason codes) as champion. Tree challenger (XGBoost), with the champion-challenger rule applied.
 - Probability of default only. LGD, EAD and expected loss are out of scope.
 
 ## Repository structure
