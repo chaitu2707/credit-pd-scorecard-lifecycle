@@ -9,9 +9,8 @@ A 12-month probability-of-default (PD) model for unsecured consumer instalment l
 | Validation | Jul 2014 to Dec 2015 | 498,802 | 3.58% | 0.432 | 0.321 | 0.0337 |
 | Out-of-time | Jan 2016 to Sep 2017 | 427,382 | 6.71% | 0.384 | 0.279 | 0.0621 |
 
-Without the lender's grade, out-of-time Gini is 0.302. Grade is kept in the champion model and documented as a dependency.
 
-Tree challengers (XGBoost, LightGBM, CatBoost and their ensemble) reach Gini 0.381 to 0.386 out of time. None beats the scorecard by the 0.02 margin required for replacement.
+Tree challenger (XGBoost) reach Gini 0.381 to 0.386 out of time. None beats the scorecard by the 0.02 margin required for replacement.
 
 **Calibration and drift are the main limitations.** Predicted PD is about half the observed default rate out of time, and monitoring shows the gap widening through 2016 and 2017. The retraining review trigger has fired. See the validation report, sections 8 and 11.
 
